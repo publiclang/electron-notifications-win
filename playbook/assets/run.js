@@ -26,13 +26,13 @@ document.querySelectorAll('button').forEach((button) => {
     	var originalCode = code;
     	for(var i = 0 ; i < num ; i++) {
     		code = originalCode.replace('{i}', i+1);
-    		replacedCode = code.replace('electron-notifications', '../index.js');
+    		replacedCode = code.replace('electron-notifications-lite', '../index.js');
     		setTimeout(eval, whenToEval,replacedCode);
     		whenToEval += stackDelay;
     		console.log("will evaluate next in "+whenToEval);
     	}
     } else {
-    	replacedCode = code.replace('electron-notifications', '../index.js')
+    	replacedCode = code.replace('electron-notifications-lite', '../index.js')
     	eval(replacedCode)
     }
   })
