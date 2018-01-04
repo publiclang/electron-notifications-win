@@ -13,13 +13,18 @@ npm install --save electron-notifications-lite
 
 
 
-当前状态说明：
+### 当前状态说明：
 
 - 不再支持所谓的vertical 模式，不再支持按钮。
 - 当Notification被点击时，它会向主线程发```notification-lite-click```的消息。
 - option中增加一个adicon字段，能够额外在右侧显示一个ICON。
 
+### Changelog:
 
+1.1.1
+- notification不再抢走焦点
+
+  ​
 
 其他说明见原fork稳定：
 
