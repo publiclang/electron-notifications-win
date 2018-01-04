@@ -19,7 +19,6 @@
             notifier.notify('[A.F.C]提醒您', {
               message: '持续工作了30分钟',
               icon: './icon.png',
-              buttons: ['Dismiss', 'Snooze'],
               duration : 3000
             })
           </textarea>
@@ -37,9 +36,8 @@ const notifier = require('electron-notifications')
 notifier.notify('[A.F.C]提醒您', {
   message: '持续工作了30分钟',
   icon: './icon.png',
-  buttons: ['Dismiss', 'Snooze'],
   duration : 3000,
-  adicon: 'https://v2ex.assets.uxengine.net/avatar/eb39/2b32/200718_normal.png?m=1514167983'
+  adicon: './adicon.png'
 })
           </textarea>
         </div>

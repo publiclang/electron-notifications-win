@@ -1,10 +1,7 @@
 ## Electron Notifications Lite
-关于notification，先总结我的经验。Mac下直接用electron的notification module就可以。Win下的notification如果想要用win原生的，会有一些问题。win7和win8/8.1/10在用户体验和内容上差别很大，前者为气泡，后者为Metro风格的。electron自己的notification现在这个版本(18-01-01)在win下问题很多。另外，electron-windows-notifcation这个在8/8.1/10上表现很好，但是不支持7，但7很用户量更大。
+关于Electron的notification，先总结我的经验。Mac下直接用electron的notification module就可以。Win下的notification如果想要用win原生的，会有一些问题。Win7和win8/8.1/10在用户体验和内容上差别很大，前者为气泡，后者为Metro风格的。electron自己的notification现在这个版本(18-01-01)在win下问题很多。另外，electron-windows-notifcation这个在8/8.1/10上表现很好，但是不支持7，但7很用户量更大。
 
-所以还是用这个electron-notifications，它是直接用browserwindow模拟的notification，原本的UI比较丑、Bug也很多，但它会是比较稳定的（因为其原理）。原来的项目bug提了很久也不修，似乎作者并不想维护了。而我正好有这个需求，因而在其基础上进行了一些工作：
-
-- 1，优化下UI，并提供黑白两个主题（win8/8.1/10下，使用黑色，和原本系统协调，win7下为白）
-- 2，修复原来的Bug
+所以还是用这个electron-notifications，它是直接用browserwindow模拟的notification，原本的UI比较丑、Bug也很多，并且细节上闪烁也比较严重，但它会是比较稳定的（因为其原理）。原来的项目bug提了很久也不修，似乎作者并不想维护了。而A.F.C App正好有这个需求，因而在原fork基础上进行了一些工作。
 
 本分支附加了-lite作为名字，您可安装：
 
@@ -12,9 +9,19 @@
 npm install --save electron-notifications-lite 
 ```
 
+![](lite-win.jpg)
 
 
-其使用方法见下方原文档：
+
+当前状态说明：
+
+- 不再支持所谓的vertical 模式，不再支持按钮。
+- 当Notification被点击时，它会向主线程发```notification-lite-click```的消息。
+- option中增加一个adicon字段，能够额外在右侧显示一个ICON。
+
+
+
+其他说明见原fork稳定：
 
 -------
 
