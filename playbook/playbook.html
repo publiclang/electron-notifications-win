@@ -29,11 +29,11 @@ notifier.notify('Calendar')
         <div class="code">
           <textarea id="full">
 const notifier = require('electron-notifications')
-notifier.notify('Calendar', {
-  message: 'Event begins in 10 minutes',
-  icon: 'http://cl.ly/J49B/3951818241085781941.png',
+notifier.notify('[A.F.C]提醒您', {
+  message: '持续工作了30分钟',
+  icon: './icon.png',
   buttons: ['Dismiss', 'Snooze'],
-  duration : 60000
+  duration : 3000
 })
           </textarea>
         </div>
@@ -139,7 +139,7 @@ notification.on('buttonClicked', (text, index) => {
         </div>
       </section>
     </div>
-    <link href='http://fonts.googleapis.com/css?family=Lora|Istok+Web:700' rel='stylesheet' type='text/css'/>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lora|Istok+Web:700' rel='stylesheet' type='text/css'/> -->
     <link href="assets/vendor/codemirror.css" rel="stylesheet" />
     <link href="assets/run.css" rel="stylesheet" />
     <script src="assets/vendor/codemirror.js"></script>

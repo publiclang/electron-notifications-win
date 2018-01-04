@@ -8,3 +8,4 @@ Thumbs.db
 /tmp/
 .settings
 .project
+package-lock.json
