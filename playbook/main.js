@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 
 let mainWindow = null
 
@@ -8,4 +8,10 @@ app.on('ready', () => {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+})
+
+ipcMain.on('notification-lite-click', () => {
+
+  console.log('notification click event')
+
 })

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 html, body {
   overflow: hidden;
   background: rgba(0, 0, 0, 0);
@@ -20,11 +21,10 @@ html, body {
   background-image: linear-gradient(#e9ebef, #e9ebef);
   /* border: 1px solid rgba(255, 255, 255, 0.5); */
   box-sizing: border-box;
-  -webkit-app-region: drag;
-  -webkit-user-select: none;
   display: grid;
-  grid-template-columns: 60px 1fr 70px;
+  grid-template-columns: 55px 1fr 70px;
   align-content: center;
+  cursor: default;
 }
 
 
@@ -51,7 +51,7 @@ html, body {
   -webkit-app-region: no-drag;
 }
 
-#notification,
+/* #notification,
 #notification .icon,
 #notification .icon img,
 #notification .message,
@@ -59,7 +59,7 @@ html, body {
 #notification .message h2,
 #notification .message p {
   -webkit-app-region: drag;
-}
+} */
 
 #notification .message {
   text-overflow: clip;

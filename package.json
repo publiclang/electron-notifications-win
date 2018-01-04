@@ -1,6 +1,6 @@
 {
   "name": "electron-notifications-lite",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A node module for sending notifications in electron applications",
   "main": "index.js",
   "scripts": {

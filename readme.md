@@ -24,6 +24,9 @@ npm install --save electron-notifications-lite
 1.1.1
 - notification不再抢走焦点
 
+1.1.2
+- 增加autoClose选项
+
   ​
 
 其他说明见原fork稳定：
