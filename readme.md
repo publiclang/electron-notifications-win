@@ -77,8 +77,6 @@ npm run playbook
 
 ## 全局配置
 
-All options are optional.
-
 * `limit`: 可选，至多展示的通知个数，默认 4
 * `width`: 可选，通知本体的宽度，默认 345px
 * `height`: 可选，通知本体的高度，默认 65px
@@ -97,15 +95,12 @@ notifier.config({
 ```
 ## 实例配置
 
-All options are optional.
-
 * `title`: 必选，通知的标题
 * `body`: 可选，通知的内容
 * `icon`: 左边展示的icon，未设置时使用全局配置
 * `duration`: 通知展示时长，单位：毫秒，未设置时使用全局配置
 
 ## 事件
-
 
 ### click
 
