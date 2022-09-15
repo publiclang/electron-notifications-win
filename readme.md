@@ -1,16 +1,13 @@
 ## Electron Notifications
 electron 原生Notifications 在window10下，具备一些优点，如在通知展示内容上原生的 Notifications toastXml 提供了完全自定义的设计。但限制也比较明显，比如强制展示至少5秒才会继续展示下一条通知，通知队列由操作系统控制，开发者无法修改队列逻辑。
 
-这个库直接用 browserWindow 模拟的 Notifications，相比原生自定义UI的能力弱很多，但通知展示时长、展示个数等可以由开发者决定，在通知的使用场景下提供了更好的**即时**展示能力。这个项目在原fork基础上做了较大修改工作，旨在开发一个仿windows风格但能够突破这些限制的通知库。
+这个库直接用 browserWindow 模拟的 Notifications，相比原生Notifications自定义UI的能力弱很多，但通知展示时长、展示个数等可以由开发者决定，在通知的使用场景下提供了更好的**即时**展示能力。这个项目在原fork基础上做了较大修改工作，旨在开发一个仿windows风格但能够突破这些限制的通知库。
 
+![](assets/notifier-win.jpg)
 ## 安装
 ```
 npm install --save electron-notifications-win 
 ```
-
-![](assets/notifier-win.jpg)
-
-
 
 ## 和原fork的功能区别
 
@@ -82,13 +79,13 @@ npm run playbook
 
 All options are optional.
 
-* `limit`: 至多展示的通知个数
-* `width`: 通知本体的宽度
-* `height`: 通知本体的高度
-* `marginRight`: 通知外框的右边外边距
-* `spaceHeight`: 通知之间的上下间距
-* `icon`: 左边展示的icon
-* `duration`: 通知展示时长，单位：毫秒
+* `limit`: 可选，至多展示的通知个数，默认 4
+* `width`: 可选，通知本体的宽度，默认 345px
+* `height`: 可选，通知本体的高度，默认 65px
+* `marginRight`: 可选，通知外框的右边外边距，默认 20px
+* `spaceHeight`: 可选，通知之间的上下间距，默认 10px
+* `icon`: 必选，左边展示的icon
+* `duration`: 可选，通知展示时长，单位：毫秒，默认 4000ms
   
 ```javascript
 // （可选）设置全局配置
@@ -102,10 +99,10 @@ notifier.config({
 
 All options are optional.
 
-* `title`: 通知的标题
-* `body`: 通知的内容
+* `title`: 必选，通知的标题
+* `body`: 可选，通知的内容
 * `icon`: 左边展示的icon，未设置时使用全局配置
-* `duration`: 通知展示时长，单位：毫秒，未设置时使用全局配置，全局配置未设置默认为4秒
+* `duration`: 通知展示时长，单位：毫秒，未设置时使用全局配置
 
 ## 事件
 
