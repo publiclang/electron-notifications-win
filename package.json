@@ -1,6 +1,6 @@
 {
-  "name": "electron-notifications-lite",
-  "version": "1.2.0",
+  "name": "electron-notifications-win",
+  "version": "1.0.0",
   "description": "A node module for sending notifications in electron applications",
   "main": "index.js",
   "scripts": {
@@ -21,8 +21,8 @@
     "macos",
     "osx"
   ],
-  "repository": "git@github.com:fateleak/electron-notifications-lite.git",
-  "author": "Fateleak",
+  "repository": "git@github.com:NSFI/electron-notifications-win.git",
+  "author": "netease/NSFI",
   "license": "MIT",
   "standard": {
     "globals": [
@@ -32,8 +32,10 @@
       "playbook/assets/vendor"
     ]
   },
+  "peerDependencies": {
+    "electron": ">=19.0.8"
+  },
   "devDependencies": {
-    "electron": "^1.7.10",
     "standard": "^8.0.0"
   },
   "dependencies": {

@@ -15,12 +15,14 @@
         </div>
         <div class="code">
           <textarea id="simple">
-const notifier = require('electron-notifications-lite')
-notifier.notify('[A.F.C]提醒您', {
-message: '持续工作了30分钟',
-icon: './icon.png',
-duration : 30000
-            })
+const ipcRenderer = window.electron.ipcRenderer;
+const random = Math.round(Math.random() * 100);
+ipcRenderer.send('notifier.notify', {
+  title: '[A.F.C]提醒您',
+  body: '持续工作了230分钟' + random,
+  icon: 'icon.png',
+  duration: 300000
+});
           </textarea>
         </div>
       </section>
@@ -32,20 +34,19 @@ duration : 30000
         </div>
         <div class="code">
           <textarea id="full">
-const notifier = require('electron-notifications-lite')
-notifier.notify('[A.F.C]提醒您', {
-  message: '持续工作了30分钟333',
-  icon: './icon.png',
-  duration : 30000,
-  adicon: './adicon.png',
-  autoClose: true
-})
+const ipcRenderer = window.electron.ipcRenderer;
+const random = Math.round(Math.random() * 100);
+ipcRenderer.send('notifier.notify', {
+  title: '[A.F.C]提醒您',
+  body: '持续工作了230分钟' + random,
+  icon: 'https://nos.netease.com/ysf/b05c70fca471eabbdccfed6f73e424e7.png',
+  duration: 3000
+});
           </textarea>
         </div>
       </section>
       
     </div>
-    <!-- <link href='http://fonts.googleapis.com/css?family=Lora|Istok+Web:700' rel='stylesheet' type='text/css'/> -->
     <link href="assets/vendor/codemirror.css" rel="stylesheet" />
     <link href="assets/run.css" rel="stylesheet" />
     <script src="assets/vendor/codemirror.js"></script>

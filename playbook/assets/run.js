@@ -15,7 +15,7 @@ document.querySelectorAll('button').forEach((button) => {
     const el = item.getTextArea()
     var code = el.value
     let replacedCode;
-    if(id=="stacking") {
+    if(id == "stacking") {
     	var num = parseInt(window.document.getElementById('stack-num').value);
     	var stackDelay = parseInt(window.document.getElementById('stack-delay').value);
     	console.log("stack delay = "+stackDelay);

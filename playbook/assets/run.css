@@ -24,6 +24,7 @@ h2 {
 }
 
 .CodeMirror {
+  width: 680px;
   height: 200px;
   font-size: 14px;
 }

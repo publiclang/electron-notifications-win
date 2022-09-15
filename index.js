@@ -1,3 +1,3 @@
-const Notifier = require('./lib/notifier')
+const Notifier = require('./lib/main/notifier')
 
-module.exports = new Notifier()
+module.exports = new Notifier();
