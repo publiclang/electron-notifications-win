@@ -1,4 +1,4 @@
-## Electron Notifications
+## Electron Notifications Win
 electron 原生Notifications 在window10下，具备一些优点，如在通知展示内容上原生的 Notifications toastXml 提供了完全自定义的设计。但限制也比较明显，比如强制展示至少5秒才会继续展示下一条通知，通知队列由操作系统控制，开发者无法修改队列逻辑。
 
 这个库直接用 browserWindow 模拟的 Notifications，相比原生Notifications自定义UI的能力弱很多，但通知展示时长、展示个数等可以由开发者决定，在通知的使用场景下提供了更好的**即时**展示能力。这个项目在原fork基础上做了较大修改工作，旨在开发一个仿windows风格但能够突破这些限制的通知库。
