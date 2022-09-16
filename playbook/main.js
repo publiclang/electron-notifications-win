@@ -15,6 +15,8 @@ app.on('ready', () => {
     mainWindow = null;
   });
   notifier.config({
+    autoClose: false,
+    // 忽略 duration
     duration: 5000,
     spaceHeight: 20,
     icon: 'icon.png',
@@ -28,7 +30,20 @@ app.on('ready', () => {
   notifier.notify({
     title: 'from main process',
     body: '你好2',
+    autoClose: true,
   }).on('click', (id) => {
     console.log('click', id);
+  });
+  notifier.notify({
+    title: 'from main process',
+    body: '你好3',
+  });
+  notifier.notify({
+    title: 'from main process',
+    body: '你好4',
+  });
+  notifier.notify({
+    title: 'from main process',
+    body: '你好5',
   });
 });

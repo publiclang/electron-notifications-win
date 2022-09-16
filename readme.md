@@ -19,8 +19,14 @@ npm install --save electron-notifications-win
 
 ## 版本更新
 
-1.0.0
+0.7.0
 - 见和原fork的功能区别
+
+0.7.1
+- 通知位置相对任务栏（程序坞）位置动态调整
+
+0.7.2
+- 支持 autoClose 选项，autoClose 为 false 时，通知不会自动关闭
 
 ## 快速使用
 
@@ -30,9 +36,10 @@ const notifier = require('electron-notifications-win');
 
 // （可选）设置全局配置
 notifier.config({
-  duration: 5000,
   spaceHeight: 20,
   icon: 'icon.png',
+  autoClose: true,
+  duration: 5000,
 });
 
 notifier.notify({
@@ -62,7 +69,7 @@ ipcRenderer.send('notifier.notify', {
   title: '[A.F.C]提醒您',
   body: '持续工作了230分钟' + random,
   icon: 'https://nos.netease.com/ysf/b05c70fca471eabbdccfed6f73e424e7.png',
-  duration: 3000
+  autoClose: false
 });
 ```
 
@@ -83,14 +90,16 @@ npm run playbook
 * `marginRight`: 可选，通知外框的右边外边距，默认 20px
 * `spaceHeight`: 可选，通知之间的上下间距，默认 10px
 * `icon`: 可选，左边展示的icon
+* `autoClose`: 可选，通知是否达到 duration 展示时长后自动关闭，默认 true。autoClose 为 false 时 忽略duration。
 * `duration`: 可选，通知展示时长，单位：毫秒，默认 4000ms
   
 ```javascript
 // （可选）设置全局配置
 notifier.config({
-  duration: 5000,
   spaceHeight: 20,
   icon: 'icon.png',
+  autoClose: true,
+  duration: 5000,
 });
 ```
 ## 实例配置
@@ -98,6 +107,7 @@ notifier.config({
 * `title`: 必选，通知的标题
 * `body`: 可选，通知的内容
 * `icon`: 可选，左边展示的icon，未设置时使用全局配置
+* `autoClose`: 可选，通知是否达到 duration 展示时长后自动关闭，未设置时使用全局配置，默认 true。autoClose 为 false 时忽略 duration。
 * `duration`: 可选，通知展示时长，单位：毫秒，未设置时使用全局配置，默认 4000ms
 
 ## 事件
