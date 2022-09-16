@@ -85,10 +85,10 @@ npm run playbook
 ## 全局配置
 
 * `limit`: 可选，至多展示的通知个数，默认 4
-* `width`: 可选，通知本体的宽度，默认 345px
-* `height`: 可选，通知本体的高度，默认 65px
-* `marginRight`: 可选，通知外框的右边外边距，默认 20px
-* `spaceHeight`: 可选，通知之间的上下间距，默认 10px
+* `width`: 可选，通知本体的宽度，默认 345 DIP
+* `height`: 可选，通知本体的高度，默认 65 DIP
+* `marginRight`: 可选，通知外框的右边外边距，默认 20 DIP
+* `spaceHeight`: 可选，通知之间的上下间距，默认 10 DIP
 * `icon`: 可选，左边展示的icon
 * `autoClose`: 可选，通知是否达到 duration 展示时长后自动关闭，默认 true。autoClose 为 false 时 忽略duration。
 * `duration`: 可选，通知展示时长，单位：毫秒，默认 4000ms
