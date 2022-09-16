@@ -25,7 +25,9 @@ html, body {
   align-content: center;
 }
 
-
+#notification.noIcon {
+  grid-template-columns: 15px 1fr 25px;
+}
 #icon {
   border-radius: 3px;
   width: 32px;

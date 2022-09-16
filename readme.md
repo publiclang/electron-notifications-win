@@ -82,7 +82,7 @@ npm run playbook
 * `height`: 可选，通知本体的高度，默认 65px
 * `marginRight`: 可选，通知外框的右边外边距，默认 20px
 * `spaceHeight`: 可选，通知之间的上下间距，默认 10px
-* `icon`: 必选，左边展示的icon
+* `icon`: 可选，左边展示的icon
 * `duration`: 可选，通知展示时长，单位：毫秒，默认 4000ms
   
 ```javascript
@@ -97,8 +97,8 @@ notifier.config({
 
 * `title`: 必选，通知的标题
 * `body`: 可选，通知的内容
-* `icon`: 左边展示的icon，未设置时使用全局配置
-* `duration`: 通知展示时长，单位：毫秒，未设置时使用全局配置
+* `icon`: 可选，左边展示的icon，未设置时使用全局配置
+* `duration`: 可选，通知展示时长，单位：毫秒，未设置时使用全局配置，默认 4000ms
 
 ## 事件
 
