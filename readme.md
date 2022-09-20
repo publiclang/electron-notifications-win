@@ -28,6 +28,10 @@ npm install --save electron-notifications-win
 0.7.2
 - 支持 autoClose 选项，autoClose 为 false 时，通知不会自动关闭
 
+0.7.3
+- 点击通知后关闭通知窗体
+- 显示通知时发出通知提示音，支持 silent 选项，控制通知是否静音
+
 ## 快速使用
 
 在主进程中使用
@@ -92,6 +96,7 @@ npm run playbook
 * `icon`: 可选，左边展示的icon
 * `autoClose`: 可选，通知是否达到 duration 展示时长后自动关闭，默认 true。autoClose 为 false 时 忽略duration。
 * `duration`: 可选，通知展示时长，单位：毫秒，默认 4000ms
+* `silent`: 可选，在显示通知时是否发出通知提示音，默认 true
   
 ```javascript
 // （可选）设置全局配置
@@ -109,6 +114,7 @@ notifier.config({
 * `icon`: 可选，左边展示的icon，未设置时使用全局配置
 * `autoClose`: 可选，通知是否达到 duration 展示时长后自动关闭，未设置时使用全局配置，默认 true。autoClose 为 false 时忽略 duration。
 * `duration`: 可选，通知展示时长，单位：毫秒，未设置时使用全局配置，默认 4000ms
+* `silent`: 可选，在显示通知时是否发出通知提示音，默认 true
 
 ## 事件
 

@@ -20,6 +20,7 @@ app.on('ready', () => {
     duration: 5000,
     spaceHeight: 20,
     icon: 'icon.png',
+    silent: true,
   });
   notifier.notify({
     title: 'from main process',
