@@ -32,6 +32,9 @@ npm install --save electron-notifications-win
 - 点击通知后关闭通知窗体
 - 显示通知时发出通知提示音，支持 silent 选项，控制通知是否静音
 
+0.7.4
+- 支持 packagedLibRendererDirectory 选项
+
 ## 快速使用
 
 在主进程中使用
@@ -97,6 +100,7 @@ npm run playbook
 * `autoClose`: 可选，通知是否达到 duration 展示时长后自动关闭，默认 true。autoClose 为 false 时 忽略duration。
 * `duration`: 可选，通知展示时长，单位：毫秒，默认 4000ms
 * `silent`: 可选，在显示通知时是否发出通知提示音，默认 true
+* `packagedLibRendererDirectory`: 可选，打包后的electron通知页面目录，默认 electron-notifications-win/lib/renderer。注意，electron打包后，生产环境需要加载库文件的notification.html，因此需要在构建时将 node_modules/electron-notifications-win/lib/renderer/**/* 复制到应用程序资源目录下（Contents/Resources for MacOS, resources for Linux and Windows），这里需要指定相对应用程序资源目录的位置。
   
 ```javascript
 // （可选）设置全局配置
