@@ -19,7 +19,7 @@ const ipcRenderer = window.electron.ipcRenderer;
 const random = Math.round(Math.random() * 100);
 ipcRenderer.send('notifier.notify', {
   title: '[A.F.C]提醒您',
-  body: '持续工作了230分钟' + random,
+  body: '持续工作了100分钟' + random,
   icon: 'icon.png',
   duration: 300000,
   silent: false,
@@ -39,10 +39,24 @@ const ipcRenderer = window.electron.ipcRenderer;
 const random = Math.round(Math.random() * 100);
 ipcRenderer.send('notifier.notify', {
   title: '[A.F.C]提醒您',
-  body: '持续工作了230分钟' + random,
+  body: '持续工作了200分钟' + random,
   icon: 'https://nos.netease.com/ysf/b05c70fca471eabbdccfed6f73e424e7.png',
-  duration: 3000
+  duration: 3000,
+  silent: true,
 });
+          </textarea>
+        </div>
+      </section>
+      <section class="sample">
+        <div class="talk">
+          <h3>Beep</h3>
+          <p></p>
+          <button for="beep">Try it!</button>
+        </div>
+        <div class="code">
+          <textarea id="beep">
+const ipcRenderer = window.electron.ipcRenderer;
+ipcRenderer.send('notifier.beep');
           </textarea>
         </div>
       </section>

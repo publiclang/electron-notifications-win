@@ -35,6 +35,12 @@ npm install --save electron-notifications-win
 0.7.4
 - 支持 packagedLibRendererDirectory 选项
 
+0.7.5
+- 支持 packagedLibRendererDirectory 选项
+
+0.7.6
+- 支持 beep 只带声音的通知
+
 ## 快速使用
 
 在主进程中使用
@@ -66,6 +72,9 @@ notifier.notify({
 .on('click', (id) => {
   console.log('click', id);
 });
+
+// 单纯声音提醒，无消息体
+notifier.beep();
 ```
 在渲染进程中使用
 ``` javascript
@@ -78,6 +87,8 @@ ipcRenderer.send('notifier.notify', {
   icon: 'https://nos.netease.com/ysf/b05c70fca471eabbdccfed6f73e424e7.png',
   autoClose: false
 });
+
+ipcRenderer.send('notifier.beep');
 ```
 
 ## Demo
@@ -111,16 +122,24 @@ notifier.config({
   duration: 5000,
 });
 ```
-## 实例配置
+## 静态方法
 
-* `title`: 必选，通知的标题
-* `body`: 可选，通知的内容
-* `icon`: 可选，左边展示的icon，未设置时使用全局配置
-* `autoClose`: 可选，通知是否达到 duration 展示时长后自动关闭，未设置时使用全局配置，默认 true。autoClose 为 false 时忽略 duration。
-* `duration`: 可选，通知展示时长，单位：毫秒，未设置时使用全局配置，默认 4000ms
-* `silent`: 可选，在显示通知时是否发出通知提示音，默认 true
+### notify
+展示一个带消息体的飘窗通知
+notifier.notify(options)
 
-## 事件
+* `options.title`: 必选，通知的标题
+* `options.body`: 可选，通知的内容
+* `options.icon`: 可选，左边展示的icon，未设置时使用全局配置
+* `options.autoClose`: 可选，通知是否达到 duration 展示时长后自动关闭，未设置时使用全局配置，默认 true。autoClose 为 false 时忽略 duration。
+* `options.duration`: 可选，通知展示时长，单位：毫秒，未设置时使用全局配置，默认 4000ms
+* `options.silent`: 可选，在显示通知时是否发出通知提示音，默认 true
+
+### beep
+只带声音通知，不带消息体
+notifier.beep();
+
+## 飘窗通知事件
 
 ### click
 

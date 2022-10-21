@@ -1,6 +1,6 @@
 {
   "name": "electron-notifications-win",
-  "version": "0.7.4",
+  "version": "0.7.6",
   "description": "A node module for sending notifications in electron applications",
   "main": "index.js",
   "scripts": {
