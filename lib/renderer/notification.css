@@ -11,6 +11,10 @@ html, body {
   padding: 0;
 }
 
+#beep {
+  width: 0;
+  height: 0;
+}
 
 #notification {
   height: 65px;
