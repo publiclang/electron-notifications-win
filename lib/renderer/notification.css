@@ -5,7 +5,7 @@
 
 html, body {
   overflow: hidden;
-  background: rgba(0, 0, 0, 0);
+  background-color: #1E68E7;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ html, body {
   font-family: Helvetica, Arial, sans-serif;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 55px 1fr 25px;
+  grid-template-columns: 65px 1fr 25px;
   align-content: center;
   color: #fff;
   background-color: #1E68E7;
@@ -34,10 +34,10 @@ html, body {
   grid-template-columns: 15px 1fr 25px;
 }
 #icon {
-  border-radius: 3px;
-  width: 32px;
-  height: 32px;
-  margin-left: 13px;
+  border-radius: 2px;
+  width: 45px;
+  height: 45px;
+  margin-left: 12px;
 }
 
 #notification .message {
@@ -47,17 +47,21 @@ html, body {
 }
 
 #title {
-  font-size: 16px;
-  color: #333;
+  font-size: 14px;
+  color: #fff;
   font-weight: bold;
   padding: 0;
+  margin-top: 2px;
 }
 #message {
   font-size: 14px;
-  color: #666;
+  color: #fff;
   font-weight: normal;
   padding-bottom: 4px;
   padding-top: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .close-btn {
