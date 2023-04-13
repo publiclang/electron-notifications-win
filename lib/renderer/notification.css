@@ -27,6 +27,8 @@ html, body {
   display: grid;
   grid-template-columns: 55px 1fr 25px;
   align-content: center;
+  color: #fff;
+  background-color: #1E68E7;
 }
 
 #notification.noIcon {
