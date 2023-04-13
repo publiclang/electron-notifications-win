@@ -17,12 +17,11 @@ html, body {
 }
 
 #notification {
-  height: 65px;
+  height: 72px;
   width: 345px;
   margin: 0;
   position: relative;
   font-family: Helvetica, Arial, sans-serif;
-  background-image: linear-gradient(#e9ebef, #e9ebef);
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 55px 1fr 25px;
@@ -48,13 +47,13 @@ html, body {
 }
 
 #title {
-  font-size: 12px;
+  font-size: 16px;
   color: #333;
   font-weight: bold;
   padding: 0;
 }
 #message {
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
   font-weight: normal;
   padding-bottom: 4px;
