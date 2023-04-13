@@ -32,9 +32,6 @@
       "playbook/assets/vendor"
     ]
   },
-  "peerDependencies": {
-    "electron": ">=19.0.8"
-  },
   "devDependencies": {
     "standard": "^8.0.0"
   },
