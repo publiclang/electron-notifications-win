@@ -40,6 +40,7 @@ html, body {
   width: 45px;
   height: 45px;
   margin-left: 12px;
+  cursor: pointer;
 }
 
 #notification .message {
@@ -54,6 +55,7 @@ html, body {
   font-weight: bold;
   padding: 0;
   margin-top: 2px;
+  cursor: pointer;
 }
 #message {
   font-size: 14px;
@@ -64,6 +66,7 @@ html, body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .close-btn {
